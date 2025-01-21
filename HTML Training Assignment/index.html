@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
 </head>
 <body>
 
-    <!-- login page div -->
-    <div id="Canvas">
-        <img id="Loginpageimage" src="images\hero-image.png" alt="working guy image">
-        
+    <div class="login-container">
+        <div class="image-section">
+            <img src="images\hero-image.png" alt="Working Guy Image" id="hero-image">
+        </div>
+        <div class="form-section">
+            <img src="images/logo.svg" alt="Company Logo" id="loginPageCompanyLogo"> 
+            <h2 class="heading">We are <span >experts</span> in business, marketing, growth, & sales.</h2>
+            <p>Login into your account</p>
+            <form>
+                <div >
+                    <input type="text" class="form-control" placeholder="Username" required>
+                </div>
+                <div >
+                    <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div >
+                    <button type="submit" class="btn">Login</button>
+                    <a href="#" class="text-muted">Forgot Password?</a>
+                </div>
+            </form>
+            <p >Are you a new Member? <a href="#">Register here</a></p>
+        </div>
     </div>
-    
 </body>
 </html>

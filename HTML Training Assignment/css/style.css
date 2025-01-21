@@ -1,31 +1,53 @@
-body
-{
-    background: cyan;
-}
-
-#Canvas
+.login-container
 {
     /* Layout Properties */
-    top: 0px;
-    left: 0px;
-    width: 1560px;
-    height: 720px;
+    display: flex;
+    column-gap: 10%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
     /* UI Properties */
     background: #FAFAFA 0% 0% no-repeat padding-box;
-    opacity: 1; 
-}
+    opacity: 1;
+}   
 
-#Loginpageimage
+#hero-image
 {
     /* Layout Properties */
-    top: 72px;
-    left: 166px;
     width: 576px;
     height: 576px;
     /* UI Properties */
-    background: transparent url('img/Ellipse 2.png') 0% 0% no-repeat padding-box;
+    background: transparent url('images/hero-image.png') 0% 0% no-repeat padding-box;
     box-shadow: 0px 4px 31px #0000000A;
     border: 20px solid #FFFFFF;
     border-radius: 50%;
     opacity: 1;
 }
+
+.form-section{
+    /* Layout Properties */
+    display: flex;
+    flex-direction: column;
+}
+#loginPageCompanyLogo {
+    /* Layout Properties */
+    width: 272px;
+    height: 58px;
+    
+    /* UI Properties */
+    opacity: 1;
+}
+
+.heading {
+    top: 183px;
+left: 905px;
+width: 500px;
+height: 100px;
+text-align: left;
+font: normal normal 300 40px/47px Roboto;
+letter-spacing: 0px;
+color: #3E3E3E;
+opacity: 1;
+}
+
