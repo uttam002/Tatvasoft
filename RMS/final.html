@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                 Sidebar                                 -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2" id="sidebar">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <div class="d-flex nav-item py-3">
+                <!-- ---------------------------- Toggle button ---------------------------- -->
+                <a
+                  href="#"
+                  class="d-flex align-items-center pb-3"
+                  onclick="myFunction()"
+                  id="btn1"
+                >
+                  <img
+                    src="images/menu-bar.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block"
+                  />
+                </a>
+                <!-- ----------------------------- header logo ----------------------------- -->
+                <a href="/" class="ms-1 d-none d-sm-inline">
+                  <img
+                    src="images/header-logo.svg"
+                    alt="Menu bar"
+                    width="148"
+                    height="25"
+                    class="d-inline-block"
+                  />
+                </a>
+              </div>
+              <!-- -------------------------- Navigation Links --------------------------- -->
+              <li class="nav-item">
+                <a
+                  href="./dashboard.html"
+                  class="nav-link align-middle px-0 active"
+                >
+                  <img
+                    src="images/dashboard-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline on">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="./innerpage.html" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/graph-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">Analysis</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/inbox-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">Inbox</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/clock-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">History</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/user-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">Users</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/maintenance-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">Maintainance</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <img
+                    src="images/setting-default.svg"
+                    alt="Menu bar"
+                    width="48"
+                    height="25"
+                    class="d-inline-block align-text-top"
+                  />
+                  <span class="ms-1 d-none d-sm-inline">Settigs</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- --------------------------------Rest of the Body --------------------------------- -->
+        <div class="col" id="bodyContent">
+          <!-- ----------------------------------------------------------------------- -->
+          <!--                                 Navbar                                  -->
+          <!-- ----------------------------------------------------------------------- -->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid">
+              <!-- ------------------------------- Menubar logo------------------------------- -->
+              <a
+                href="#"
+                class="align-items-center pb-3 d-sm-none"
+                onclick="myFunctionReverse()"
+                id="hbMenu"
+              >
+                <img
+                  src="images/menu-bar.svg"
+                  alt="Menu bar"
+                  width="48"
+                  height="25"
+                  class="d-inline-block"
+                />
+              </a>
+              <!-- -------------------------- Mobile view logo --------------------------- -->
+              <a class="navbar-brand" href="#">
+                <img
+                  src="images/mobile-header-logo.svg"
+                  alt="Logo"
+                  width="30"
+                  height="30"
+                  class="d-sm-none"
+                />
+              </a>
+              <!-- ---------------------------- Search section ---------------------------- -->
+              <form class="d-flex" role="search">
+                <button class="btn" type="submit">
+                  <img
+                    src="images/search-icon.svg"
+                    alt="Menu bar"
+                    width="30"
+                    height="25"
+                    class="d-inline-block"
+                  />
+                </button>
+                <input
+                  class="form-control d-none d-lg-inline"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </form>
+              <!-- -------------------------- rightSideOfNavbar -------------------------- -->
+              <div id="rightSideOfNavbar" class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="images/notification-icon.svg"
+                    alt="Menu bar"
+                    width="30"
+                    height="25"
+                    class="d-inline-block d-none d-sm-block"
+                  />
+                </a>
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="images/profile.png"
+                    alt="Menu bar"
+                    width="44"
+                    height="44"
+                    class="d-inline-block"
+                  />
+                </a>
+                <a class="navbar-brand" href="#">
+                  <span
+                    class="d-none d-md-inline"
+                    style="color: #000000; font: 20px/33px"
+                    >Jone Doe</span
+                  >
+                  <img
+                    src="images/downward-arrow.svg"
+                    alt="Menu bar"
+                    width="30"
+                    height="20"
+                    class="d-inline-block d-sm-inline d-none"
+                  />
+                </a>
+              </div>
+            </div>
+          </nav>
+          <!-- ----------------------------------------------------------------------- -->
+          <!--                        Main Content of the page                         -->
+          <!-- ----------------------------------------------------------------------- -->
+          <div class="p-4 bg-light" id="main-content">
+            <h2>Dashboard</h2>
+            <div class="container-fluid">
+              <!-- -------------------------- statistics-Cards --------------------------- -->
+              <div class="" id="statistics">
+                <div class="row" id="dashboard-card">
+                  <div
+                    class="card col-xl-2 col-lg-3 col-md-5 col-sm-11 col-12 mt-2 mx-3 px-3 py-4"
+                  >
+                    <div class="col-md-4">
+                      <img
+                        src="images/star.svg"
+                        alt="dashboard-default"
+                        width="50"
+                        height="50"
+                        class="card-img"
+                      />
+                    </div>
+                    <div class="col-8 text-content">
+                      <h5>23,456</h5>
+                      <p>New Products</p>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-xl-2 col-lg-3 col-md-5 col-sm-11 col-12 mt-2 mx-3 px-3 py-4"
+                  >
+                    <div class="col-md-4">
+                      <img
+                        src="images/new-product.svg"
+                        alt="dashboard-default"
+                        width="50"
+                        height="50"
+                        class="card-img"
+                      />
+                    </div>
+                    <div class="col-8 text-content">
+                      <h5>23,456</h5>
+                      <p>New Products</p>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-xl-2 col-lg-3 col-md-5 col-sm-11 col-12 mt-2 mx-3 px-3 py-4"
+                  >
+                    <div class="col-md-4">
+                      <img
+                        src="images/total-product.svg"
+                        alt="dashboard-default"
+                        class="card-img"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+                    <div class="col-8 text-content">
+                      <h5>23,456</h5>
+                      <p>New Products</p>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-xl-2 col-lg-3 col-md-5 col-sm-11 col-12 mt-2 mx-3 px-3 py-4"
+                  >
+                    <div class="col-md-4">
+                      <img
+                        src="images/dollar-filled.svg"
+                        alt="dashboard-default"
+                        width="50"
+                        height="50"
+                        class="card-img"
+                      />
+                    </div>
+                    <div class="col-8 text-content">
+                      <h5>23,456</h5>
+                      <p>New Products</p>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-xl-2 col-lg-3 col-md-11 col-sm-11 col-12 mt-2 mx-3 px-3 py-4"
+                  >
+                    <div class="col-4">
+                      <img
+                        src="images/money-bag.svg"
+                        alt="dashboard-default"
+                        class="card-img"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+                    <div class="col-8 text-content">
+                      <h5>23,456</h5>
+                      <p>New Products</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ------------------------------- Graphs -------------------------------- -->
+              <div class="row justify-content-between" id="graphs">
+                <!-- ---------------------------- Linear graph ----------------------------- -->
+                <div
+                  class="col-sm-12 col-md-7 col-12 ms-3 mt-2"
+                  id="linear-graph"
+                >
+                  <div class="row d-flex">
+                    <div class="col-md-4 col-sm-11 col-12 me-1 my-1">
+                      <h4>Sales</h4>
+                    </div>
+                    <div
+                      class="col-md-7 col-sm-11 col-12 d-flex justify-content-end"
+                    >
+                      <a href="#" class="ms-3">weekly</a>
+                      <a href="#" class="ms-3">monthly</a>
+                      <a href="#" class="ms-3">yearly</a>
+                    </div>
+                  </div>
+                  <div class="row h-75 mt-4">
+                    <img
+                      src="images/data-graph.png"
+                      alt="data-graph"
+                      width="100%"
+                    />
+                  </div>
+                </div>
+                <!-- ------------------------------ Pie chart ------------------------------ -->
+                <div
+                  class="col-sm-12 col-md-4 col-12 ms-1 mt-2 mx-3 my-1"
+                  id="pie-chart"
+                >
+                  <div class="row">
+                    <h4>Sales by country</h4>
+                  </div>
+                  <div class="row mt-4">
+                    <img
+                      src="images/pie-chart.svg"
+                      alt="pie-chart"
+                      width="500"
+                      height="300"
+                    />
+                    <div class="d-flex px-5 justify-content-between">
+                      <ul>
+                        <li id="USA">United states of america</li>
+                        <li id="RUS">Russia</li>
+                      </ul>
+                      <ul>
+                        <li id="CAN">Canada</li>
+                        <li id="IND">India</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------- Invoice Table ---------------------------- -->
+              <div class="container-fluid ms-1 mt-2 mx-3" id="invoice-table">
+                <h4>Invoices</h4>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">INVOICE</th>
+                        <th scope="col">COMPANY NAME</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">DUE DATE</th>
+                        <th scope="col">STATUS</th>
+                        <th scope="col">AMOUNT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">651535</th>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Other</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Vendor</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="failedStatus">Failed</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">651535</th>
+                        <td>Property Management Company</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Subcontractor Company</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Mortgage Company</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">651535</th>
+                        <td>TPA</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="failedStatus">Failed</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Fire Department</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="failedStatus">Failed</td>
+                        <td>$47,800</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">558612</th>
+                        <td>Insurance Carrier</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td class="paidStatus">Paid</td>
+                        <td>$47,800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
